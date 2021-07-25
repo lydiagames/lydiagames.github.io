@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Word Connect</title>
+
+    <style>
+        body{
+            margin              : 0;
+            overflow            : hidden;
+            background-color    : black;
+        }
+
+        #game{
+            margin          : 0 auto;
+  
+            justify-content : center;
+        }
+
+        canvas{
+            width   : 100%;
+            height  : 100%;
+        }
+
+        #pbar{
+          display: none;
+        }
+    </style>
+
+    <script src="js/libs/phaser.js"></script>
+    <script src="js/data/Config.js"></script>
+    <script src="js/scenes/PreloadScene.js"></script>
+    <script src="js/scenes/GameScene.js"></script>
+    <script src="js/scenes/GameHudScene.js"></script>
+    <script src="js/data/Constants.js"></script>
+    <script src="js/data/model.js"></script>
+    <script src="js/data/Language.js"></script>
+    <script src="js/data/GameData.js"></script>
+    <script src="js/scenes/game_hud.js"></script>
+    <script src="js/prefabs/board.js"></script>
+    <script src="js/prefabs/SpriteButton.js"></script>
+    <script src="js/prefabs/CoinMeter.js"></script>
+    <script src="js/prefabs/preview.js"></script>
+    <script src="js/prefabs/ExtraWordsButton.js"></script>
+    <script src="js/prefabs/LevelEnd.js"></script>
+    <script src="js/controllers/HintController.js"></script>
+    <script src="js/controllers/GameController.js"></script>
+    <script src="js/controllers/ComboController.js"></script>
+    <script src="js/prefabs/dial.js"></script>
+    <script src="js/prefabs/Dialog.js"></script>
+    <script src="js/prefabs/ExtraWordsDialog.js"></script>
+    <script src="js/prefabs/DictionaryDialog.js"></script>
+    <script src="js/prefabs/Progressbar.js"></script>
+    
+
+    <script src="js/game.js"></script>
+  </head>
+  <body>
+    <div id="game"></div>
+    <img id="pbar" src="assets/textures/semi_circle_pb_bar.png">
+
+  
+  </body>
+</html>
