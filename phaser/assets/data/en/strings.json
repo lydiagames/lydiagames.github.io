@@ -1,9 +1,0 @@
-{
-	"combo_display"		: "COMBO: %1",
-	"feedbacks"			: "EXCELLENT, MARVELLOUS, GREAT, FANTASTIC, DELIGHTFUL, FABULOUS, AWESOME, AMAZING, OUTSTANDING, PERFECT, SUPER, WONDERFUL, SPLENDID, INCREDIBLE, SMART, NICE, GOOD WORK",
-	"select_tile"		: "Please select a tile",
-	"not_bonus_word"	: "Not a bonus word!",
-	"bonus_dialog_title": "Bonus Words",
-	"bonus_dialog_text"	: "Bonus words you've found in this level",
-	"dict_dialog_title"	: "Dictionary"
-}
