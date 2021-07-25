@@ -1,0 +1,57 @@
+<html>
+
+<head>
+
+<script>
+
+
+let word = "girl";
+let WORDNIC_API_KEY = "sh2ebobqdmoyapuqdmvdzgfci7le5sbrfro373gac1mh10ros";
+
+var xmlhttp = new XMLHttpRequest();
+xmlhttp.open("GET", "https://api.wordnik.com/v4/word.json/" + word.toLowerCase() +"/definitions?limit=1&includeRelated=false&useCanonical=false&includeTags=false&api_key=" + WORDNIC_API_KEY, true);
+
+
+
+
+var params = "s=" + word;
+
+xmlhttp.onreadystatechange = function() {
+	if (xmlhttp.readyState == XMLHttpRequest.DONE) {   // XMLHttpRequest.DONE == 4
+		if (xmlhttp.status == 200) {
+			//document.getElementById("myDiv").innerHTML = xmlhttp.responseText;
+			parseResponse(xmlhttp.responseText)
+		}else {
+			console.log("dictionary status: ", xmlhttp.status);
+			parseResponse(null);
+		}
+	}
+};
+
+
+xmlhttp.send(params);
+
+
+
+function parseResponse(text){
+	let response;
+	if(text == null) response = null;
+	let jsonObject = JSON.parse(text);
+	
+	if(jsonObject["statusCode"]){
+		if(jsonObject["message"]) response = jsonObject["message"];
+		else if(jsonObject["error"]) response = jsonObject["error"];
+		else response = jsonObject["statusCode"];
+	}
+	
+	response = jsonObject[0].text;
+	console.log(response);
+}
+
+</script>
+
+
+</head>
+
+
+</html>
